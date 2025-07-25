@@ -39,7 +39,7 @@ function readData(inputData) {
             </tr>`
     }
 
-    document.getElementById("mb-3").innerHTML = template
+    document.getElementsByClassName("mb-3").innerHTML = template
 return template
 }
 
