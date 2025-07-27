@@ -1,16 +1,16 @@
 
+function readData(biodataJSON) {
 
-function readData(inputData) {
-
-
+    let data = localStorage.getItem("biodataJSON")
+    let obj = JSON.parse(data)
     
     let template=""
 
-    for (let i = 0; i < inputData.length; i++) {
-        let elemen = inputData[i];
+    for (let i = 0; i < obj.length; i++) {
+        let elemen = obj[i];
         
         template +=
-        <div>
+        `<div>
             <div>
                 <h1>${elemen.firstName}</h1>
                 <h2>${elemen.lastName}</h2>
@@ -39,12 +39,13 @@ function readData(inputData) {
                 <h1>${elemen.languageTwo}</h1>
                 <p>${elemen.languageTwoProficiency}</p>
             </div>
-        </div>
+        </div>`
         
     }
 
-    document.getElementsByClassName("mb-3").innerHTML = template
+    document.getElementsByClassName("inputData").innerHTML = template
 return template
 }
 
-console.log(readData())
+
+readData()
