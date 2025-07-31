@@ -26,6 +26,6 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
   message.textContent = "Registrasi berhasil! Mengalihkan ke halaman login...";
 
   setTimeout(() => {
-    window.location.href = "login.html"; // ganti ke halaman login 
+    window.location.href = "index.html"; // ganti ke halaman login 
   }, 1500);
 });
