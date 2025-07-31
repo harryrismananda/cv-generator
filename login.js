@@ -36,6 +36,6 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   message.textContent = "login berhasil...";
 
   setTimeout(() => {
-    window.location.href = "./index.html"; // ganti ke halaman login
+    window.location.href = "./cv-generator.html"; // ganti ke halaman login
   }, 1000);
 });
