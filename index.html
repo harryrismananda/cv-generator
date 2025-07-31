@@ -5,121 +5,322 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV Generator</title>
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-
   </head>
 
-  <body>
-    <header>
-      <h1>CV Generator</h1>
+  <body class="bg-info-subtle px-auto py-auto mx-auto my-auto">
+    <br />
+    <header class="container-md text-bg-primary p-3 rounded-3 shadow">
+      <h1 class="text-center">CV Generator</h1>
     </header>
-
+    <br />
     <form>
-      <div class="mb-3">
-        <label for="firstName" class="form-label">First Name</label>
-        <input type="text" class="form-control" id="firstName" />
-      </div>
-      <div class="mb-3">
-        <label for="lastName" class="form-label">Last Name</label>
-        <input type="text" class="form-control" id="lastName" />
-      </div>
-      <div class="mb-3">
-        <label for="birthDate" class="form-label">Birth Date</label>
-        <input type="date" class="form-control" id="birthDate" />
-      </div>
-      <div class="mb-3">
-        <label for="latestEducation" class="form-label">Latest Education</label>
-        <input type="text" class="form-control" id="latestEducation" />
-      </div>
-      <div class="mb-3">
-        <label for="gpa" class="form-label">GPA / National Exam Score</label>
-        <input type="text" class="form-control" id="gpa" />
-      </div>
-      <div class="mb-3">
-        <label for="workExperienceOne" class="form-label"
-          >Work Experience 1</label
-        >
-        <input type="text" class="form-control" id="workExperienceOne" />
-      </div>
-      <div class="mb-3">
-        <label for="workExperienceOneDesc" class="form-label"
-          >Work Experience 1 Description</label
-        >
-        <textarea
-          class="form-control"
-          id="workExperienceOneDesc"
-          rows="3"
-        ></textarea>
-      </div>
-      <div class="mb-3">
-        <label for="workExperienceTwo" class="form-label"
-          >Work Experience 2</label
-        >
-        <input type="text" class="form-control" id="workExperienceTwo" />
-      </div>
-      <div class="mb-3">
-        <label for="workExperienceTwoDesc" class="form-label"
-          >Work Experience 2 Description</label
-        >
-        <textarea
-          class="form-control"
-          id="workExperienceTwoDesc"
-          rows="3"
-        ></textarea>
-      </div>
-      <div class="mb-3">
-        <label for="skillList" class="form-label">Skills</label>
-        <textarea class="form-control" id="skillList" rows="3"></textarea>
-      </div>
-      <div class="mb-3">
-        <label for="certAndLicenses" class="form-label"
-          >Certification / License 1</label
-        >
-        <input type="text" class="form-control" id="certAndLicenses" />
-      </div>
-      <div class="mb-3">
-        <label for="certAndLicenses2" class="form-label"
-          >Certification / License 2</label
-        >
-        <input type="text" class="form-control" id="certAndLicenses2" />
-      </div>
-      <div class="mb-3">
-        <label for="languageOne" class="form-label">Language 1</label>
-        <input type="text" class="form-control" id="languageOne" />
-      </div>
-      <div class="mb-3">
-        <label for="languageOneProficiency" class="form-label"
-          >Language 1 Proficiency</label
-        >
-        <input type="text" class="form-control" id="languageOneProficiency" />
-      </div>
-      <div class="mb-3">
-        <label for="languageTwo" class="form-label">Language 2</label>
-        <input type="text" class="form-control" id="languageTwo" />
-      </div>
-      <div class="mb-3">
-        <label for="languageTwoProficiency" class="form-label"
-          >Language 2 Proficiency</label
-        >
-        <input type="text" class="form-control" id="languageTwoProficiency" />
-      </div>
+      <div class="container-md" id="firstRow">
+        <div class="row">
+          <div class="col-md-6">
+            <div
+              id="personalDataContainer"
+              class="container-md bg-secondary-subtle p-2 rounded-3 shadow"
+            >
+              <h3 class="text-center">Personal Data</h3>
+              <hr class="" />
+              <div class="row">
+                <div class="mb-3 col">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="firstName" />
+                </div>
+                <div class="mb-3 col px-auto mx-auto">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="mb-3 col">
+                  <label for="birthDate" class="form-label">Birth Date</label>
+                  <input type="date" class="form-control" id="birthDate" />
+                </div>
+                <div class="mb-3 col">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="mb-3 col">
+                  <label for="social-media" class="form-label"
+                    >Social Media</label
+                  >
+                  <input type="text" class="form-control" id="socialMedia" />
+                </div>
+                <div class="mb-3 col">
+                  <label for="phone-number" class="form-label"
+                    >Phone Number</label
+                  >
+                  <input type="text" class="form-control" id="phoneNumber" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="address" class="form-label">Address</label>
+                  <textarea
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+              <button
+                class="btn btn-primary mb-3 mt-3"
+                id="btn-sv-pd"
+                onclick="createDataPD(event)"
+              >
+                Save
+              </button>
+            </div>
+            <br />
+          </div>
+          <div class="col md-6">
+            <div
+              id="workExpContainer"
+              class="container-md bg-secondary-subtle p-2 rounded-3 shadow"
+            >
+              <h3 class="text-center">Work Experience</h3>
+              <hr />
+              <div class="row">
+                <div class="mb-3 col">
+                  <label for="workExpEmployer" class="form-label"
+                    >Employer</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="workExpEmployer"
+                  />
+                </div>
 
-      <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
-      <button type="button" class="btn btn-primary" id="deleteBtn">Delete</button>
+                <div class="col">
+                  <label for="workExpTitle" class="form-label">Job Title</label>
+                  <input type="text" class="form-control" id="workExpTitle" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="mb-3 col">
+                  <label for="workExpStart" class="form-label"
+                    >Start Date</label
+                  >
+                  <input type="date" class="form-control" id="workExpStart" />
+                </div>
+                <div class="mb-3 col">
+                  <label for="workExpEnd" class="form-label">End Date</label>
+                  <input type="date" class="form-control" id="workExpEnd" />
+                </div>
+              </div>
+              <div class="mb-3 col">
+                <label for="workLocation" class="form-label">Location</label>
+                <input type="text" class="form-control" id="workLocation" />
+              </div>
+              <div class="mb-3">
+                <label for="workExperienceDesc" class="form-label"
+                  >Description</label
+                >
+                <textarea
+                  class="form-control"
+                  id="workExperienceDesc"
+                  rows="3"
+                ></textarea>
+                <button
+                  class="btn btn-primary mb-3 mt-3"
+                  onclick="createDataExp(event)"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <div class="container-md" id="secondRow">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div
+              id="educationContainer"
+              class="container-md bg-secondary-subtle p-2 rounded-3 shadow"
+            >
+              <h3 class="text-center">Education and Certification</h3>
+              <hr />
+              <div class="row">
+                <div class="mb-3 col">
+                  <label for="schoolName" class="form-label"
+                    >University / School</label
+                  >
+                  <input type="text" class="form-control" id="schoolName" />
+                </div>
+                <div class="col">
+                  <label for="major" class="form-label">Major</label>
+                  <input type="text" class="form-control" id="major" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="mb-3 col">
+                  <label for="gpa" class="form-label"
+                    >GPA / National Exam Score</label
+                  >
+                  <input type="number" class="form-control" id="gpa" />
+                </div>
+                <div class="mb-3 col">
+                  <label for="latestEducation" class="form-label"
+                    >Latest Education</label
+                  >
+                  <select
+                    class="form-select"
+                    aria-label=".form-select-sm latestEducation"
+                    id="selectEducation"
+                  >
+                    <option selected></option>
+                    <option value="S3">S3</option>
+                    <option value="S2">S2</option>
+                    <option value="S1">S1</option>
+                    <option value="SMA">SMA</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="certAndLicenses" class="form-label"
+                  >Certification</label
+                >
+                <input type="text" class="form-control" id="certAndLicenses" />
+              </div>
+              <br />
+              <button
+                class="btn btn-primary mb-3 mt-3"
+                onclick="createDataEducation(event)"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+          <br />
+          <div class="col md-6">
+            <div
+              id="orgExpContainer"
+              class="container-md bg-secondary-subtle p-2 rounded-3 shadow"
+            >
+              <h3 class="text-center">Organization Experience</h3>
+              <hr />
+              <div class="row">
+                <div class="col">
+                  <label for="orgName" class="form-label"
+                    >Organization Name</label
+                  >
+                  <input type="text" class="form-control" id="orgName" />
+                </div>
+                <div class="mb-3 col">
+                  <label for="orgRole" class="form-label">Role</label>
+                  <input type="text" class="form-control" id="orgRole" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="mb-3 col">
+                  <label for="orgStart" class="form-label">Start Date</label>
+                  <input type="date" class="form-control" id="orgStart" />
+                </div>
+                <div class="mb-3 col">
+                  <label for="orgEnd" class="form-label">End Date</label>
+                  <input type="date" class="form-control" id="orgEnd" />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="orgExpDesc" class="form-label">Description</label>
+                <textarea
+                  class="form-control"
+                  id="orgExpDesc"
+                  rows="3"
+                ></textarea>
+              </div>
+              <button
+                class="btn btn-primary mb-3 mt-3"
+                onclick="createDataOrg(event)"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="container-md" id="thirdRow">
+        <div class="row g-4">
+          <div class="col md-6">
+            <div
+              class="container-md bg-secondary-subtle p-2 rounded-3 shadow"
+              id="skillsandLanguageContainer"
+            >
+              <h3 class="text-center">Skills and Language</h3>
+              <hr />
+              <div class="mb-3">
+                <label for="skillList" class="form-label">Skills</label>
+                <textarea
+                  class="form-control"
+                  id="skillList"
+                  rows="3"
+                ></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="language" class="form-label">Language</label>
+                <input type="text" class="form-control" id="language" />
+              </div>
+              <div class="mb-3">
+                <label for="languageProficiency" class="form-label"
+                  >Language Proficiency</label
+                >
+                <select
+                  class="form-select"
+                  aria-label=".form-select-sm languageProficiency"
+                  id="languageProficiency"
+                >
+                  <option selected>Language Proficiency</option>
+                  <option value="Native">Native</option>
+                  <option value="Fluent">Fluent</option>
+                  <option value="Advanced">Advanced</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Beginner">Beginner</option>
+                </select>
+              </div>
+              <button
+                class="btn btn-primary mb-3 mt-3"
+                onclick="createDataSL(event)"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div id="submitButton" class="container-md d-flex justify-content-end">
+        <a onclick="AllData(event)" type="submit" class="btn btn-primary"
+          >Submit</a
+        >
+      </div>
     </form>
-
+    <footer class="text-center">Copyright &copy; Kelompok Kuda 2025</footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
-
     <script src="./script.js"></script>
   </body>
 </html>
